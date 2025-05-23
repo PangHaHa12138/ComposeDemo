@@ -1,0 +1,7 @@
+<!-- res/drawable/bg_floating_widget.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="#CC222328" />
+    <corners android:radius="16dp" />
+</shape>
+

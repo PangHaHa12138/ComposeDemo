@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/floating_card"
+    android:layout_width="300dp"
+    android:layout_height="170dp"
+    android:clipToOutline="true"
+    android:background="@drawable/bg_floating_widget"
+    >
+
+    <!-- 直播播放器内容，铺满父布局 -->
+    <androidx.media3.ui.PlayerView
+        android:id="@+id/player_view"
+        app:surface_type="texture_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- 中间操作icon（暂停/播放），初始可见，由代码控制显隐 -->
+    <ImageView
+        android:id="@+id/iv_play_pause"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent"
+        android:src="@android:drawable/ic_media_pause"
+        android:visibility="visible"
+        app:tint="@color/white" />
+    <!-- 关闭按钮，左上角，初始可见，由代码控制显隐 -->
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_gravity="top|start"
+        android:layout_margin="6dp"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        android:visibility="visible"
+        app:tint="@color/white" />
+
+
+    <ImageView
+        android:id="@+id/iv_back_home"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_gravity="top|end"
+        android:layout_margin="6dp"
+        android:src="@android:drawable/ic_menu_always_landscape_portrait"
+        android:visibility="visible"
+        app:tint="@color/white" />
+
+</FrameLayout>
