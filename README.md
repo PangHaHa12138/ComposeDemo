@@ -9,6 +9,6 @@ demo截图
 
 <img src="https://github.com/PangHaHa12138/ComposeDemo/blob/main/screenshot/music%20shot%203.png" alt="3" style="width:300px;">
 
-<video src="https://github.com/PangHaHa12138/ComposeDemo/blob/main/screenshot/music.mp4" controls width="300"></video>
+https://github.com/PangHaHa12138/ComposeDemo/blob/main/screenshot/music.mp4
 
 
