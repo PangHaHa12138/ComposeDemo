@@ -3,5 +3,12 @@
 demo截图
 
 # 仿网易云音乐
-<img src="https://github.com/PangHaHa12138/ComposeDemo/blob/main/screenshot/music%20shot%201.png" alt="1" style="width:200px;">
+<img src="https://github.com/PangHaHa12138/ComposeDemo/blob/main/screenshot/music%20shot%201.png" alt="1" style="width:500px;">
+
+<img src="https://github.com/PangHaHa12138/ComposeDemo/blob/main/screenshot/music%20shot%202.png" alt="2" style="width:500px;">
+
+<img src="https://github.com/PangHaHa12138/ComposeDemo/blob/main/screenshot/music%20shot%203.png" alt="3" style="width:500px;">
+
+<iframe height=1135 width=500 src="https://github.com/PangHaHa12138/ComposeDemo/blob/main/screenshot/music.mp4">
+
 
