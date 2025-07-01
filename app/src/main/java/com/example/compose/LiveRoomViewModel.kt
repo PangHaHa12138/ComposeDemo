@@ -1,5 +1,7 @@
 package com.example.compose
 
+import android.os.Build
+import androidx.annotation.RequiresApi
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.ui.graphics.Color
 import androidx.lifecycle.ViewModel
@@ -38,7 +40,7 @@ class LiveRoomViewModel : ViewModel() {
 
                     delay(500) // 飘心动画间隔 500ms
 
-                    println("===> Loop hearts i = $index size = ${hearts.size}")
+                    //println("===> Loop hearts i = $index size = ${hearts.size}")
 
                     index++
                 }
@@ -64,7 +66,7 @@ class LiveRoomViewModel : ViewModel() {
                     if (chatMessages.size > 100) chatMessages.removeAt(0)
                     delay(1000) // 插入消息间隔 1s
 
-                    println("===> Loop chatMessages i = $index2  size = ${chatMessages.size}")
+                    //println("===> Loop chatMessages i = $index2  size = ${chatMessages.size}")
 
                     index2++
 

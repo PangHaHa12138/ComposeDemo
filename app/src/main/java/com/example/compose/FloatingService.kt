@@ -11,6 +11,7 @@ import android.view.*
 import android.widget.FrameLayout
 import android.widget.ImageView
 import androidx.annotation.OptIn
+import androidx.cardview.widget.CardView
 import androidx.media3.common.MediaItem
 import androidx.media3.common.PlaybackException
 import androidx.media3.common.Player
@@ -85,7 +86,8 @@ class FloatingService : Service() {
         playerView.player = exoPlayer
 
         val videoUrl = "http://220.161.87.62:8800/hls/0/index.m3u8"
-        val mediaItem = MediaItem.fromUri(videoUrl)
+        val videoUrl3 = "http://39.164.160.249:9901/tsfile/live/0125_1.m3u8"
+        val mediaItem = MediaItem.fromUri(videoUrl3)
         exoPlayer?.setMediaItem(mediaItem)
         exoPlayer?.prepare()
         exoPlayer?.playWhenReady = true

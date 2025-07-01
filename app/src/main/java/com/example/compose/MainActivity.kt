@@ -1,7 +1,9 @@
 package com.example.compose
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
+import android.content.res.Configuration
 import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import android.net.Uri
 import android.os.Bundle
@@ -12,6 +14,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.animation.core.spring
+import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -26,6 +30,7 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.ElevatedButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -44,13 +49,14 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.coerceAtLeast
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import com.example.compose.ui.theme.TestComposeTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-        enableEdgeToEdge()
         super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
 
         setContent {
             TestComposeTheme {
@@ -141,6 +147,20 @@ fun OnboardingScreen(
                     context.startActivity(Intent(context, TestLiveActivity::class.java))
                 }) {
                 Text("testLive")
+            }
+
+            ElevatedButton(
+                modifier = Modifier.padding(vertical = 10.dp),
+                onClick = {
+
+                    val intent = Intent(context, MusicPlayerActivity::class.java)
+                    context.startActivity(intent)
+                    if (context is Activity) {
+                        context.overridePendingTransition(R.anim.slide_in_bottom, 0)
+                    }
+
+                }) {
+                Text("testMusic")
             }
         }
     }
@@ -255,11 +275,13 @@ fun CheckPermission() {
 
 
 fun goSetting(context: Context) {
-    val intent = Intent(
-        Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
-        Uri.parse("package:" + context.packageName)
-    )
-    context.startActivity(intent)
+    //val intent1 = Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION, Uri.parse("package:" + context.packageName))
+    //context.startActivity(intent1)
+
+    val intent2 = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS)
+    intent2.data = Uri.parse("package:" + context.packageName)
+    intent2.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+    context.startActivity(intent2)
 }
 
 @Composable

@@ -49,72 +49,56 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
-    implementation(libs.exoplayer)
     implementation(libs.androidx.navigation.runtime.ktx)
     implementation(libs.androidx.navigation.compose)
-    implementation (libs.coil.kt.coil.compose)
     implementation(libs.androidx.material)
     implementation(libs.androidx.material.icons.core)
     implementation(libs.androidx.material.icons.extended)
-    implementation (libs.androidx.cardview)
+    implementation(libs.androidx.cardview)
+    implementation(libs.coil.kt.coil.compose)
 
+    implementation(libs.exoplayer)
 
     implementation(libs.androidx.media3.exoplayer)
-    // For DASH playback support with ExoPlayer
-    implementation(libs.androidx.media3.exoplayer.dash)
-    // For HLS playback support with ExoPlayer
-    implementation(libs.androidx.media3.exoplayer.hls)
-    // For SmoothStreaming playback support with ExoPlayer
-    implementation(libs.androidx.media3.exoplayer.smoothstreaming)
-    // For RTSP playback support with ExoPlayer
-    implementation(libs.androidx.media3.exoplayer.rtsp)
-    // For MIDI playback support with ExoPlayer (see additional dependency requirements in
-    // https://github.com/androidx/media/blob/release/libraries/decoder_midi/README.md)
-    //implementation(libs.androidx.media3.exoplayer.midi)
-    // For ad insertion using the Interactive Media Ads SDK with ExoPlayer
-    implementation(libs.androidx.media3.exoplayer.ima)
-
-    // For loading data using the Cronet network stack
-    implementation(libs.androidx.media3.datasource.cronet)
-    // For loading data using the OkHttp network stack
-    implementation(libs.androidx.media3.datasource.okhttp)
-    // For loading data using librtmp
-    implementation(libs.androidx.media3.datasource.rtmp)
-
-    // For building media playback UIs using Compose
-    implementation(libs.androidx.media3.ui.compose)
-    // For building media playback UIs using Views
-    implementation(libs.androidx.media3.ui)
-    // For building media playback UIs for Android TV using the Jetpack Leanback library
-    implementation(libs.androidx.media3.ui.leanback)
-
-    // For exposing and controlling media sessions
-    implementation(libs.androidx.media3.session)
-    // For extracting data from media containers
-    implementation(libs.androidx.media3.extractor)
-    // For integrating with Cast
-    implementation(libs.androidx.media3.cast)
-    // For scheduling background operations using Jetpack Work's WorkManager with ExoPlayer
-    implementation(libs.androidx.media3.exoplayer.workmanager)
-    // For transforming media files
-    implementation(libs.androidx.media3.transformer)
-    // For applying effects on video frames
-    implementation(libs.androidx.media3.effect)
-    // For muxing media files
-    implementation(libs.androidx.media3.muxer)
-
-    // Common functionality for reading and writing media containers
-    implementation(libs.androidx.media3.container)
-    // Common functionality for media database components
-    implementation(libs.androidx.media3.database)
-    // Common functionality for media decoders
-    implementation(libs.androidx.media3.decoder)
-    // Common functionality for loading data
-    implementation(libs.androidx.media3.datasource)
-    // Common functionality used across multiple media libraries
     implementation(libs.androidx.media3.common)
-    // Common Kotlin-specific functionality
     implementation(libs.androidx.media3.common.ktx)
+    implementation(libs.androidx.media3.container)
+    implementation(libs.androidx.media3.exoplayer.dash)
+    implementation(libs.androidx.media3.exoplayer.hls)
+    implementation(libs.androidx.media3.exoplayer.smoothstreaming)
+    implementation(libs.androidx.media3.exoplayer.rtsp)
+    implementation(libs.androidx.media3.datasource.rtmp)
+    implementation(libs.androidx.media3.datasource.okhttp)
+    implementation(libs.androidx.media3.datasource)
+    implementation(libs.androidx.media3.database)
+    implementation(libs.androidx.media3.extractor)
+    implementation(libs.androidx.media3.decoder)
+    implementation(libs.androidx.media3.ui)
+    implementation(libs.androidx.media3.ui.compose)
+    implementation(libs.androidx.media3.session)
+
+
+//    // For MIDI playback support with ExoPlayer (see additional dependency requirements in
+//    // https://github.com/androidx/media/blob/release/libraries/decoder_midi/README.md)
+//    //implementation(libs.androidx.media3.exoplayer.midi)
+//    // For ad insertion using the Interactive Media Ads SDK with ExoPlayer
+//    implementation(libs.androidx.media3.exoplayer.ima)
+//    // For loading data using the Cronet network stack
+//    implementation(libs.androidx.media3.datasource.cronet)
+//    // For building media playback UIs for Android TV using the Jetpack Leanback library
+//    implementation(libs.androidx.media3.ui.leanback)
+//    // For integrating with Cast
+//    implementation(libs.androidx.media3.cast)
+//    // For scheduling background operations using Jetpack Work's WorkManager with ExoPlayer
+//    implementation(libs.androidx.media3.exoplayer.workmanager)
+//    // For transforming media files
+//    implementation(libs.androidx.media3.transformer)
+//    // For applying effects on video frames
+//    implementation(libs.androidx.media3.effect)
+//    // For muxing media files
+//    implementation(libs.androidx.media3.muxer)
+
+
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

@@ -6,7 +6,6 @@ import android.net.Uri
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
 import androidx.annotation.OptIn
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.LinearEasing
@@ -69,7 +68,6 @@ import kotlin.math.roundToInt
 
 class TestLiveActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-        enableEdgeToEdge()
         super.onCreate(savedInstanceState)
         setContent {
             LiveRoomScreen()
@@ -105,10 +103,15 @@ fun LiveRoomScreen() {
         Color(0xFF8B00FF)  // 紫
     )
 
-    val videoUrl = "http://220.161.87.62:8800/hls/0/index.m3u8"
-    val videoUrl2 = "http://devimages.apple.com/iphone/samples/bipbop/gear1/prog_index.m3u8"
-    val videoUrl3 =
-        "https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_fmp4/master.m3u8"
+    val videoUrl0 = "http://220.161.87.62:8800/hls/0/index.m3u8"
+    val videoUrl1 = "http://devimages.apple.com/iphone/samples/bipbop/gear1/prog_index.m3u8"
+    val videoUrl2 = "https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_fmp4/master.m3u8"
+    val videoUrl3 = "http://39.164.160.249:9901/tsfile/live/0125_1.m3u8"
+    val videoUrl4 = "http://39.164.160.249:9901/tsfile/live/0122_1.m3u8"
+    val videoUrl5 = "http://fn.tmde.top:35455/nptv/dongnan.m3u8"
+    val videoUrl6 = "http://39.164.160.249:9901/tsfile/live/0128_1.m3u8"
+    val videoUrl7 = "http://185.189.225.150:85/8madrid/index.m3u8"
+
 
 
     val anchorInfo = AnchorInfo(
@@ -158,7 +161,7 @@ fun LiveRoomScreen() {
             )
 
             // 视频全屏
-            ExoPlayerVideo(videoUrl)
+            ExoPlayerVideo(videoUrl3)
 
             // ---------- 包裹所有浮层的"叠加容器"及左右滑动 ----------
             OverlayWithSlide {

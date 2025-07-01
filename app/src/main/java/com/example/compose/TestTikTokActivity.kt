@@ -5,7 +5,6 @@ import android.net.Uri
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.CubicBezierEasing
 import androidx.compose.animation.core.LinearEasing
@@ -72,15 +71,15 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.viewinterop.AndroidView
+import androidx.media3.common.MediaItem
+import androidx.media3.common.Player
+import androidx.media3.exoplayer.ExoPlayer
+import androidx.media3.ui.PlayerView
 import coil.compose.rememberAsyncImagePainter
-import com.google.android.exoplayer2.ExoPlayer
-import com.google.android.exoplayer2.MediaItem
-import com.google.android.exoplayer2.Player
-import com.google.android.exoplayer2.ui.StyledPlayerView
+
 
 class TestVideoActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-        enableEdgeToEdge()
         super.onCreate(savedInstanceState)
         setContent {
             MyApp()
@@ -137,6 +136,7 @@ fun VideoScreen() {
 
     // 初始视频列表
     val initialVideoList = listOf(
+        "https://jomin-web.web.app/resource/video/video_iu.mp4",
         "https://www.w3schools.com/html/movie.mp4",
         "https://media.w3.org/2010/05/sintel/trailer.mp4",
         "https://www.w3school.com.cn/example/html5/mov_bbb.mp4",
@@ -148,8 +148,8 @@ fun VideoScreen() {
         "https://static.ybhospital.net/test-video-4.mp4",
         "https://static.ybhospital.net/test-video-5.mp4",
         "https://static.ybhospital.net/test-video-6.mp4",
-        "https://jomin-web.web.app/resource/video/video_iu.mp4",
 
+        "https://jomin-web.web.app/resource/video/video_iu.mp4",
         "https://www.w3schools.com/html/movie.mp4",
         "https://media.w3.org/2010/05/sintel/trailer.mp4",
         "https://www.w3school.com.cn/example/html5/mov_bbb.mp4",
@@ -161,7 +161,7 @@ fun VideoScreen() {
         "https://static.ybhospital.net/test-video-4.mp4",
         "https://static.ybhospital.net/test-video-5.mp4",
         "https://static.ybhospital.net/test-video-6.mp4",
-        "https://jomin-web.web.app/resource/video/video_iu.mp4",
+
     )
     val videoList = remember { mutableStateListOf(*initialVideoList.toTypedArray()) }
 
@@ -286,7 +286,7 @@ fun VideoItem(uri: String, isSelected: Boolean, exoPlayer: ExoPlayer, screenHeig
             // 播放当前选中的视频
             AndroidView(
                 factory = { context ->
-                    StyledPlayerView(context).apply {
+                    PlayerView(context).apply {
                         player = exoPlayer
                         useController = false // 播放器控制器ui
 

@@ -23,8 +23,7 @@
         android:layout_gravity="center"
         android:background="@android:color/transparent"
         android:src="@android:drawable/ic_media_pause"
-        android:visibility="visible"
-        app:tint="@color/white" />
+        android:visibility="visible" />
     <!-- 关闭按钮，左上角，初始可见，由代码控制显隐 -->
     <ImageView
         android:id="@+id/iv_close"
@@ -34,7 +33,7 @@
         android:layout_margin="6dp"
         android:src="@android:drawable/ic_menu_close_clear_cancel"
         android:visibility="visible"
-        app:tint="@color/white" />
+         />
 
 
     <ImageView
@@ -45,6 +44,6 @@
         android:layout_margin="6dp"
         android:src="@android:drawable/ic_menu_always_landscape_portrait"
         android:visibility="visible"
-        app:tint="@color/white" />
+         />
 
 </FrameLayout>
