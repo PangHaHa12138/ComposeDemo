@@ -1,1 +1,7 @@
-完全使用compose 实现了 仿朋友圈 仿抖音 仿小红书 直播 等功能
+完全使用compose 实现了 仿网易云音乐，仿朋友圈，仿抖音上下滑动，仿小红书UI界面，仿抖音直播间和直播悬浮窗 等功能
+
+demo截图
+
+# 仿网易云音乐
+<img src="https://github.com/PangHaHa12138/ComposeDemo/blob/main/screenshot/music%20shot%201.png" alt="1" style="width:200px;">
+
